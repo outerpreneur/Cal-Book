@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Booking BraFitter</h1>
+    <form action="" id="form">
+      <div id="dateForm">
+        <h2>When</h2>
+        <div>
+          <label for="date">Date</label>
+          <input type="date" id="date" name="date" />
+        </div>
+        <div>
+          <label for="time">Time</label>
+          <input type="time" id="time" name="time" />
+        </div>
+      </div>
+      <div id="locationForm">
+        <h2>Where</h2>
+        <div>
+          <label for="Amsterdam">Amsterdam</label>
+          <input type="radio" id="Amsterdam" value="673773" name="location" />
+        </div>
+        <div>
+          <label for="Rotterdam">Rotterdam</label>
+          <input type="radio" id="Rotterdam" value="673661" name="location" />
+        </div>
+        <div>
+          <label for="Utrecht">Utrecht</label>
+          <input type="radio" id="Utrecht" value="673735" name="location" />
+        </div>
+      </div>
+      <div id="contactForm">
+        <h2>Who</h2>
+        <div>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" />
+        </div>
+        <div>
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone" />
+        </div>
+      </div>
+      <div id="serviceForm">
+        <h2>Email Address</h2>
+        <select name="email" id="email">
+          <option value="booking1@superbra.nl">booking1@superbra.nl</option>
+          <option value="booking2@superbra.nl">booking2@superbra.nl</option>
+          <option value="booking3@superbra.nl">booking3@superbra.nl</option>
+          <option value="booking4@superbra.nl">booking4@superbra.nl</option>
+          <option value="booking5@superbra.nl">booking5@superbra.nl</option>
+          <option value="booking6@superbra.nl">booking6@superbra.nl</option>
+          <option value="booking7@superbra.nl">booking7@superbra.nl</option>
+        </select>
+   
+      <button type="submit">Submit</button>
+    </form>
+    <div id="quick-booking">
+      <button id="postButton">Post to API</button>
+      <button id="getButton">Get from API</button>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
