@@ -15,7 +15,7 @@ submissionForm.addEventListener("submit", function (e) {
   let time = document.getElementById("time").value;
   let email = document.getElementById("email").value;
   let phone = document.getElementById("phone").value;
-  let bookingTimeString = `${date}T${time}Z`;
+  let bookingTimeString = `${date}T${time}T`;
   console.log(selectedLocation, name, email, date, time);
 
   fetch(`https://api.cal.com/v1/bookings?apiKey=${apiKey}`, {
