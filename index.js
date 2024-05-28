@@ -16,7 +16,15 @@ submissionForm.addEventListener("submit", function (e) {
   let time = document.getElementById("time").value;
   let email = document.getElementById("email").value;
   let phone = document.getElementById("phone").value;
-  let bookingTimeString = `${date}T${time}:00.000Z`;
+
+  // Create a new Date object with the selected date and time
+  let bookingTime = new Date(`${date}T${time}:00.000Z`);
+
+  // Add 2 hours to the time
+  bookingTime.setHours(bookingTime.getHours() - 2);
+
+  // Format the date back to an ISO string and remove the milliseconds
+  let bookingTimeString = bookingTime.toISOString().split(".")[0] + "Z";
   console.log(selectedLocation, name, email, date, time);
 
   fetch(`https://api.cal.com/v1/bookings?apiKey=${apiKey}`, {
