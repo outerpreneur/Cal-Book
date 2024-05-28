@@ -6,6 +6,7 @@ const submissionForm = document.getElementById("form");
 submissionForm.addEventListener("submit", function (e) {
   e.preventDefault();
   console.log("Form submitted");
+  alert("Form submitted");
   console.log(document.getElementById("email").value);
   let selectedLocation = document.querySelector(
     'input[name="location"]:checked'
@@ -15,7 +16,7 @@ submissionForm.addEventListener("submit", function (e) {
   let time = document.getElementById("time").value;
   let email = document.getElementById("email").value;
   let phone = document.getElementById("phone").value;
-  let bookingTimeString = `${date}T${time}T`;
+  let bookingTimeString = `${date}T${time}:00.000Z`;
   console.log(selectedLocation, name, email, date, time);
 
   fetch(`https://api.cal.com/v1/bookings?apiKey=${apiKey}`, {
@@ -38,18 +39,11 @@ submissionForm.addEventListener("submit", function (e) {
     }),
   })
     .then((response) => {
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-        alert("Submission failed!");
-      }
       console.log("Response status:", response.status);
       console.log("Response headers:", response.headers);
       return response.json();
     })
-    .then((data) => {
-      console.log(data);
-      alert("Submission successful!");
-    })
+    .then((data) => console.log(data))
     .catch((error) => console.error("Error:", error));
 });
 

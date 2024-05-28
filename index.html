@@ -3,47 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="styles.css"
-    />
-    <title>Cal Booking</title>
+    <title>Document</title>
   </head>
   <body>
+    <h1>Booking BraFitter</h1>
     <form action="" id="form">
-      <h1>Booking BraFitter</h1>
       <div id="dateForm">
         <h2>When</h2>
         <div>
           <label for="date">Date</label>
           <input type="date" id="date" name="date" />
         </div>
-        <select id="time">
-          <option value="10:00:00.000">10:00</option>
-          <option value="11:00:00.000">11:00</option>
-          <option value="12:00:00.000">12:00</option>
-          <option value="13:45:00.000">13:45</option>
-          <option value="14:45:00.000">14:45</option>
-          <option value="15:45:00.000">15:45</option>
-          <option value="16:45:00.000">16:45</option>
-        </select>
-        <p>*Needs to match with the dame, time and available</p>
+        <div>
+          <label for="time">Time</label>
+          <input type="time" id="time" name="time" />
+        </div>
       </div>
       <div id="locationForm">
         <h2>Where</h2>
-        <div class="locations">
-          <div>
-            <label for="Amsterdam">Amsterdam</label>
-            <input type="radio" id="Amsterdam" value="673773" name="location" />
-          </div>
-          <div>
-            <label for="Rotterdam">Rotterdam</label>
-            <input type="radio" id="Rotterdam" value="673661" name="location" />
-          </div>
-          <div>
-            <label for="Utrecht">Utrecht</label>
-            <input type="radio" id="Utrecht" value="673735" name="location" />
-          </div>
+        <div>
+          <label for="Amsterdam">Amsterdam</label>
+          <input type="radio" id="Amsterdam" value="673773" name="location" />
+        </div>
+        <div>
+          <label for="Rotterdam">Rotterdam</label>
+          <input type="radio" id="Rotterdam" value="673661" name="location" />
+        </div>
+        <div>
+          <label for="Utrecht">Utrecht</label>
+          <input type="radio" id="Utrecht" value="673735" name="location" />
         </div>
       </div>
       <div id="contactForm">
